@@ -35,6 +35,9 @@
     --gray30: #212121;
     --gray20: #212429;
     --gray10: #616161;
+    --black: black;
+    --black10: #424242;
+    --black61: #616161;
 }
 html{
     scroll-behavior: smooth;
@@ -63,14 +66,50 @@ header {
 header li{
     margin-bottom: 16px;
 }
-header a:hover {
+/* header a:hover {
     color: #212121;
+
+} */
+header a:hover {
+    color: var(--white30);
     font-weight: bold;
+}
+/* header a:hover {
+    color: var(--gray30);
+} */
+#project-modes a:hover {
+    color: var(--white30);
+}
+#project-modes li:hover {
+    background-color: var(--black);
+}
+
+#project-modes li:hover a {
+    color: var(--white30);
+}
+
+a {
+    color: var(--gray30);
 }
 
 nav details summary {
     font-weight: bold;
     line-height: 24px;
+}
+#project-modes {
+    margin-block-end: 40px;
+}
+
+#project-modes ul {
+    padding-inline-start: 0px;
+}
+
+#project-modes li {
+    margin: 0px;
+    padding-block: 8px;
+    padding-inline-start: 8px;
+    border-radius: 4px;
+    list-style: none;
 }
 
 pre {
@@ -123,7 +162,7 @@ blockquote span::before{
 }
 
 #mail-contact {
-    color: black;
+    color: var(--black) ;
 }
 .wrapper{
     width: 902px;
@@ -237,8 +276,8 @@ form input::-webkit-input-placeholder {
     block-size: 48px;
     padding-inline: 16px;
     padding-block: 12px;
-    background-color: black;
-    border-color: black;
+    background-color: var(--black);
+    border-color: var(--black)k;
     color: var(--white30);
     position: absolute;
     padding: 10px;
@@ -250,13 +289,16 @@ form input::-webkit-input-placeholder {
     font-size: 24px;
 }
 footer {
+    display: flex;
     margin-block-start: 40px;
     padding-block: 48px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--gray30);
+    max-width: 100%;
+    position: relative;
+    z-index: 999;
 }
 
 footer p {
@@ -276,6 +318,8 @@ footer img {
     margin-right: 9px;
     cursor: pointer;
 }
+
+
 
 
 @media screen and (min-width: 1366px){
@@ -319,5 +363,8 @@ footer img {
 
     .form {
         margin-block-end: 80px;
+    }
+    footer p {
+        font-size: 32px;
     }
 }
